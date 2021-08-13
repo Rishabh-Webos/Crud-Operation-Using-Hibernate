@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.model.Employee">
+		<id name="employeeId" type="integer" column="id">
+			<generator class="identity"></generator>
+		</id>
+		<property name="employeeName" not-null="true"></property>
+		<property name="employeeEmail" not-null="true"></property>
+		<property name="employeePassword" not-null="true"></property>
+		<many-to-one name="address" class="com.model.Address"></many-to-one>
+	</class>
+</hibernate-mapping>
